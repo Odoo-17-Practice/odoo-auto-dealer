@@ -32,6 +32,13 @@ class DealerVehicle(models.Model):
         ('sold', 'Vendido')
     ], string='Estado', default='new', tracking=True)
 
+    mechanic_id = fields.Many2one(
+        'res.partner',
+        string='Mecánico Principal',
+        domain="[('is_mechanic', '=', True)]",
+        help="Solo se pueden seleccionar contactos marcados como mecánicos."
+    )
+
     # Lógica de negocio
     # Generar el nombre automáticamente
     @api.depends('brand', 'model', 'license_plate')
