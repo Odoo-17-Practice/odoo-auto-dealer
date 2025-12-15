@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="odoo_auto_dealer/static/description/icon.png" alt="Odoo AutoDealer Logo" width="100" height="100">
+  <img src="static/description/icon.png" alt="Odoo AutoDealer Logo" width="400" height="400">
   <h1>Odoo AutoDealer</h1>
   <p>
     <strong>Sistema de gestión de concesionario para Odoo 17: Inventario y Taller</strong>
