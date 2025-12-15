@@ -29,7 +29,7 @@
         <field name="name">dealer.vehicle.view</field>
         <field name="model">dealer.vehicle</field>
         <field name="arch" type="xml">
-            <list decoration-info="state=='new'" decoration-success="state=='available'" decoration-muted="state == 'sold'">
+            <tree decoration-info="state=='new'" decoration-success="state=='available'" decoration-muted="state == 'sold'">
                 <field name="name"/>
                 <field name="brand"/>
                 <field name="model"/>
@@ -37,7 +37,7 @@
                 <field name="price"/>
                 <field name="state" widget="badge"/>
                 <field name="mechanic_id" widget="many2one_avatar"/>
-            </list>
+            </tree>
         </field>
     </record>
 
