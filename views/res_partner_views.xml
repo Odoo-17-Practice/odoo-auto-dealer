@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Herencia de la vista formulario de partner-->
+    <record id="view_partner_form_inherit_dealer" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_mechanic"/>
+                <field name="speciality" invisible="not is_mechanic"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Herencia de la vista búsqueda para filtrar mecánicos -->
+    <record id="view_res_partner_filter_inherit_dealer" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit.dealer</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='type_person']" position="after">
+                <filter string="Mecánicos" name="mechanic" domain="[('is_mechanic', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
