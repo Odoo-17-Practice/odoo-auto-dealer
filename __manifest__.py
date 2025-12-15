@@ -9,13 +9,14 @@
         - Control de Estados (Nuevo, Disponible, Vendido).
     """,
     'author': "Geraldo Jaramillo",
-    'website': "https://www.tuhosting.com",
+    'website': "https://www.web.com",
     'category': 'Sales',
     'version': '17.0.1.0.0',
     'depends': [
         'base',
         'contacts'],
     'data': [
+        'views/res_partner_views.xml'
     ],
     'application': True,
     'installable': True,
