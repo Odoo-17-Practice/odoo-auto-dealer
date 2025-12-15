@@ -16,7 +16,10 @@
         'base',
         'contacts'],
     'data': [
-        'views/res_partner_views.xml'
+        'security/ir.model.access.csv',
+        'views/res_partner_views.xml',
+        'views/vehicle_views.xml',
+        'views/menus.xml'
     ],
     'application': True,
     'installable': True,
