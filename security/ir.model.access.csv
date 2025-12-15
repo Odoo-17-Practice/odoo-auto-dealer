@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_odoo-auto-dealer_odoo-auto-dealer,odoo-auto-dealer.odoo-auto-dealer,model_odoo-auto-dealer_odoo-auto-dealer,base.group_user,1,1,1,1
+access_dealer_vehicle,dealer.vehicle,model_dealer_vehicle,base.group_user,1,1,1,1
