@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_dealer_vehicle" model="ir.actions.act_window">
+        <field name="name">Inventario de Vehículos</field>
+        <field name="res_model">dealer.vehicle</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                !Registra tu primer vehículo¡
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_dealer_root"
+            name="AutoDealer"
+            web_icon="odoo_auto_dealer,static/description/icon.png"
+            sequence="10"/>
+
+    <menuitem id="menu_dealer_main"
+              name="Operaciones"
+              parent="menu_dealer_root"
+              sequence="10"/>
+
+    <menuitem id="menu_dealer_vehicle"
+              name="Vehículos"
+              parent="menu_dealer_main"
+              action="action_dealer_vehicle"
+              sequence="10"/>
+</odoo>
